@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Following Along in Week 10</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+
+    <label for="form-input">What shall I do today?</label>
+    <input id='form-input' type="text" name="form-input"/>
+    <button class='btn' onclick="addTodo()">Add to the list</button>
+    <ul id="todo-container">
+    </ul>
+
+<script>
+    // user clicks button
+    // code makes an li
+    // sets up the li with the right text and such
+    // puts the li in the ul
+
+    const input = document.getElementById("form-input")
+    const container = document.getElementById("todo-container")
+
+    function addTodo() {
+        const text = input.value;
+        const li = document.createElement("li")
+        li.textContent = text;
+        container.appendChild(li)
+    }
+</script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+</body>
+</html>
